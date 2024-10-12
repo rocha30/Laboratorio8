@@ -1,16 +1,14 @@
-import com.android.tools.r8.internal.kt
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.example.laboratorio8"
+    namespace = "com.example.laboratorio8moviles"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.laboratorio8"
+        applicationId = "com.example.laboratorio8moviles"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -53,47 +51,25 @@ android {
 
 dependencies {
 
+    implementation ("androidx.navigation:navigation-compose:2.4.0")
+    implementation ("io.coil-kt:coil-compose:2.0.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("io.coil-kt:coil-compose:2.4.0")
-    implementation ("androidx.compose.material3:material3:1.0.0")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
-    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0")
-    implementation ("androidx.compose.ui:ui:1.4.0")
-    implementation ("androidx.compose.material3:material3:1.0.0")
-    implementation ("androidx.compose.ui:ui-tooling-preview:1.4.0")
-
-    // ViewModel and LiveData
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
-
-    // Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-
-    // Coil for image loading
-    implementation ("io.coil-kt:coil-compose:2.4.0")
-
-
-
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.litert.support.api)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
